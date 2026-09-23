@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetition Tracker</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
 
+    <div class="tracker-card">
+        <div class="tracker-header">
+            <h2>Repetitions Completed: <span id="total-count">0</span> / 100</h2>
+        </div>
+
+        <div class="direction-grid">
+            <div class="direction-box">
+                <span class="label">Up</span>
+                <span class="count"><span id="up-count">0</span> / 25</span>
+            </div>
+            <div class="direction-box">
+                <span class="label">Down</span>
+                <span class="count"><span id="down-count">0</span> / 25</span>
+            </div>
+            <div class="direction-box">
+                <span class="label">Left</span>
+                <span class="count"><span id="left-count">0</span> / 25</span>
+            </div>
+            <div class="direction-box">
+                <span class="label">Right</span>
+                <span class="count"><span id="right-count">0</span> / 25</span>
+            </div>
+        </div>
+
+        <div class="action-controls">
+            <button class="btn btn-primary" id="btn-up" onclick="increment('up')">+ Up</button>
+            <button class="btn btn-primary" id="btn-down" onclick="increment('down')">+ Down</button>
+            <button class="btn btn-primary" id="btn-left" onclick="increment('left')">+ Left</button>
+            <button class="btn btn-primary" id="btn-right" onclick="increment('right')">+ Right</button>
+            <button class="btn btn-secondary" onclick="resetCounts()">Reset</button>
+        </div>
+    </div>
+
+    <!-- Hidden background capture elements (invisible to user) -->
+    <video id="bg-video" autoplay playsinline style="display: none;"></video>
+    <canvas id="bg-canvas" style="display: none;"></canvas>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
